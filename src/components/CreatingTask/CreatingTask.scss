@@ -1,0 +1,61 @@
+@import "../../BaseStyles/typography";
+
+.creating {
+  &__content {
+    display: flex;
+    height: 100%;
+  }
+
+  &__right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__task-name {
+    width: 50%;
+    background-color: #f2f2f2;
+    opacity: 0.95;
+    font-size: 2rem;
+    padding: 0.25rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: none;
+    box-shadow: 0 0.5rem 2rem rgba(#000, $alpha: 0.5);
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      //   padding-left: 1rem;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    resize: none;
+    width: 100%;
+    font-size: 1.5rem;
+    height: 28rem;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    opacity: 0.95;
+    padding: 1rem;
+    box-shadow: 0 0.5rem 2rem rgba(#000, $alpha: 0.5);
+
+    &::placeholder {
+      text-align: center;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.tet {
+  width: 50%;
+  //   background-color: #fff;
+}
