@@ -3,7 +3,7 @@ import "./ScoringTask.scss";
 import submissions from "../../TestData";
 
 export default function ScoringPreview({ match }) {
-  const [score, setScore] = useState(null);
+  const [score, setScore] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const data = submissions.find(

@@ -25,7 +25,9 @@ export default function Scoring() {
     };
   };
 
-  let preview = <img className="creating__img-prev" ref={previewRef}></img>;
+  let preview = (
+    <img className="creating__img-prev" alt="Preview" ref={previewRef}></img>
+  );
 
   if (imgEmpty) {
     preview = <div className="creating__img-empty">Choose an Image</div>;

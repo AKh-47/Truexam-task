@@ -9,7 +9,11 @@ export default function ScoringAll() {
       <h2 className="scoring__all-subheading">Select a Task</h2>
       <div className="scoring__all">
         {submissions.map((sub) => (
-          <ScoringCard orgImg={sub.original} taskId={sub.taskID} />
+          <ScoringCard
+            key={sub.taskID}
+            orgImg={sub.original}
+            taskId={sub.taskID}
+          />
         ))}
       </div>
     </>
