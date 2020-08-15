@@ -20,6 +20,8 @@
 
 #### -> Each task is rated out of 10
 
+#### -> Each task can be downloaded locally
+
 ### Potential improvements:
 
 #### -> Taking feedback from teachers
