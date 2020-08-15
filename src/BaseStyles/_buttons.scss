@@ -1,0 +1,48 @@
+@import "./mixins";
+
+.btn-white {
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  color: #212121;
+  background-color: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(#000, $alpha: 0.5);
+  transition: 0.2s all;
+
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(#000, $alpha: 0.5);
+  }
+
+  &:active {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem rgba(#000, $alpha: 0.75);
+  }
+}
+
+.btn-back {
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  transition: 0.2s all;
+
+  &:hover {
+    transform: translateY(-0.3rem);
+  }
+
+  @include respond(tab-land) {
+    top: 2rem;
+    left: 2rem;
+  }
+
+  @include respond(tab-port) {
+    top: 4px;
+    left: 4px;
+  }
+
+  @include respond(phone) {
+    // padding: 2vh;
+  }
+}

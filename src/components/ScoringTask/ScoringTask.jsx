@@ -1,37 +1,34 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import "./ScoringTask.scss";
+
+import ScoringPreview from "./ScoringPreview";
+import ScoringMain from "./ScoringMain";
+import ScoringAll from "./ScoringAll";
 
 export default function Scoring() {
   return (
     <div className="scoring">
-      <h1 className="scoring__heading main-heading">Scoring Tasks</h1>
-      <div className="scoring__content">
-        <div className="scoring__left">
-          <h2 className="scoring__img-title">Student Name - Task ID</h2>
-          <div className="scoring__preview">
-            <div className="scoring__original">
-              <span className="scoring__img-type">Original</span>
-            </div>
-            <div className="scoring__edited">
-              <span className="scoring__img-type">Edited</span>
-            </div>
-          </div>
-          <div className="scoring__left-bottom">
-            <div className="scoring__score">
-              Score:{" "}
-              <input
-                // maxlength="1"
-                // 10 is 2 digits
-                className="scoring__score-input"
-                type="text"
-                placeholder="X"
-              />{" "}
-              / 10
-            </div>
-          </div>
-        </div>
-        <div className="scoring__right"></div>
+      <div
+        onClick={() => {
+          window.history.go(-1);
+          return false;
+        }}
+        className="btn-back"
+      >
+        {"<- Back"}
       </div>
+      <h1 className="scoring__heading main-heading">Scoring Tasks</h1>
+      <Router>
+        <Switch>
+          <Route path="/score" exact component={ScoringMain} />
+          <Route path="/score/all" exact component={ScoringAll} />
+          <Route path="/score/:id" component={ScoringPreview} />
+          {/* <ScoringPreview /> */}
+          {/* <ScoringAll /> */}
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -1,3 +1,5 @@
+@import "../../../BaseStyles/mixins";
+
 .content {
   width: 100%;
   min-height: 80vh;
@@ -5,4 +7,5 @@
   box-shadow: 0 0.5rem 4rem rgba(#000, $alpha: 0.5);
   border-radius: 10px;
   padding: 3rem;
+  position: relative;
 }

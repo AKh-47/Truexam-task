@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "./BaseStyles/mixins";
 
 html {
   scroll-behavior: smooth;
@@ -11,9 +12,41 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #757575;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  // background: linear-gradient(to bottom, #7ed56f88, #28b48588);
+  background-color: #ebf7fd;
+  &:hover {
+    // background: linear-gradient(to top, #7ed56f, #28b485);
+  }
+}
+
 body {
+  // background-image:linear-gradient(#eee, #aaa);
   background-color: #1e1e21;
   // background-color: #eaf6f6;
   color: #f6f6f6;
   padding: 10vh;
+
+  @include respond(tab-land) {
+    padding: 8vh;
+  }
+
+  @include respond(tab-port) {
+    padding: 6vh;
+  }
+
+  @include respond(phone) {
+    padding: 2vh;
+  }
 }

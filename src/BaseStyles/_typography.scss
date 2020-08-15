@@ -1,11 +1,14 @@
+@import "./mixins";
+
 .main-heading {
   text-align: center;
   font-size: 3rem;
   letter-spacing: 3px;
   margin-bottom: 3rem;
   //   background: linear-gradient(to top right, #fb8434, #fb6d17);
-  background: linear-gradient(120deg, #7ed56f, #28b485);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  //   background: linear-gradient(120deg, #7ed56f, #28b485);
+  //   background-clip: text;
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  @include text-bg;
 }
